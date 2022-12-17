@@ -1,0 +1,63 @@
+@font-face {
+    font-family: Maustica;
+    src: url('src/fonts/MusticaproSemibold.otf');
+}
+
+/* -------------------------------------------------- */
+/* BODY */
+body{
+    background-color: rgb(241, 248, 255) !important;
+}
+
+/* -------------------------------------------------- */
+/* LAY HEAD BG */
+.t-a-j{
+    text-align: justify;
+}
+
+/* -------------------------------------------------- */
+/* LAY HEAD BG */
+#el-bg-head-block{
+    position: relative;
+
+    width: 100%;
+    height: 25vh;
+
+    margin-bottom: -25vh;
+
+    background-image: url("src/img_01.png");
+    background-size: cover;
+
+    z-index: -1;
+}
+
+/* -------------------------------------------------- */
+/* LAY CAPTION */
+#el-caption-block{
+    height: 25vh;
+}
+
+.h-caption{
+    font-size: 3.7em;
+    font-family: 'Maustica';
+    color: var(--bs-primary);
+
+    text-shadow:3px 3px 1px white;
+}
+
+.header-img-logo{
+    width: 30%;
+}
+
+/* -------------------------------------------------- */
+/* LAY PAGE */
+#el-page{
+
+}
+
+/* -------------------------------------------------- */
+/* LAY CAPTION */
+#el-content-block{
+    background-color: white !important;
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.2);
+}
