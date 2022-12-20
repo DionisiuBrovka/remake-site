@@ -1,0 +1,279 @@
+@charset "UTF-8";
+
+#_wep {position: fixed;left: 0;right: 0;bottom: 100%; background: #eee; color: #000; z-index: 999999999999; font-size: 14px;font-family: Tahoma, sans-serif; letter-spacing: normal;}
+	#_wep * {box-sizing: border-box; color: inherit; letter-spacing: inherit; font: inherit; white-space:  inherit; margin: 0; padding: 0; }
+
+	._we #_wep {display: block;}
+	
+	#_wep._visible {top: 0; bottom: initial;}
+	
+	#_wep > .wrapper {position: relative; border-bottom: solid 2px #555;}
+	#_wep .inner {position: relative;margin: 0 auto; max-width: 1200px;}
+
+	#_wep button {color: #000;border-radius: 0px !important;background: #eee;text-transform: none !important;display: inline-block !important;line-height: inherit !important; cursor: pointer; }
+		#_wep button:first-letter {text-transform: unset !important; }
+	
+	#_wep #_we_visibility_toggle {display: none !important;height: 32px;width: 36px;background: #eeeeee;position: absolute;background-size: 25px auto;right: 0;top: 100%;cursor: pointer;border: solid 2px #545454;line-height: 26px !important;color: #000 !important;text-align: center;border-radius: 0 0 5px 5px !important;}
+		#_wep._enabled #_we_visibility_toggle {display: block !important; }
+
+		#_wep #_we_visibility_toggle span {display: none; }
+
+
+
+
+	#_wep .panel_bar {/* height: 36px; */position: relative;background: #fff; padding: 2px 0 2px;overflow:  hidden;}
+		#_wep.opened .panel_bar .inner {/* line-height: 28px; */}
+		
+		#_wep .panel_bar button {padding: 0 5px;line-height: inherit;height: 30px;border: solid 1px #777;margin-right: 2px;background: #eee;display:  inline-block;vertical-align: middle;min-width: 30px;text-align:  center;color: #000 !important;border-radius: 3px !important;}
+			#_wep .panel_bar button.active_option {background: #555;border-color: #444;position: relative;color: #fff !important;}
+			#_wep .panel_bar button span {/* vertical-align: middle; */}
+		#_wep .panel_bar .buttons {float: right;display:  inline-block;text-align: right;}
+		
+			/*#_wep #_we_settings_toggle {height: 36px; border: none;background-color: inherit;position: absolute;right: 0; cursor: pointer; margin: 0;top: 0;}*/
+			#_wep .panel_bar #_we_switch {margin-right: 15px; }	
+		
+	/* bar options */
+	#_wep .panel_bar .options {display: inline-block;/* vertical-align:  middle; */float:  left;}
+		#_wep .panel_bar .option {display: inline-block;margin-right: 30px;}
+			#_wep .panel_bar .option .label {display: block;display:  none;}
+			#_wep .panel_bar .option .values {display: inline-block; }
+			
+	
+			
+		
+	#_wep .panel_body {clear: both; }
+		#_wep.opened .panel_body .options {display: block; }
+		
+			
+	/* body options */
+	#_wep .panel_body .options {overflow: hidden; display: none; margin: 0 auto; max-width: 1200px; line-height: 20px;}
+		#_wep .panel_body .option {border-bottom: dotted 1px #555; overflow: hidden; clear: both; padding: 5px; }
+		#_wep .panel_body .option:last-child {border-bottom: none; padding-bottom: 5px; }
+		
+			#_wep .panel_body .label {display: inline-block;width: 150px;line-height: 1.1em;text-align: right;vertical-align: middle;padding: 2px 12px;}
+			#_wep .panel_body .option .values {display: inline-block;width: auto;/* font-size: 14px; */vertical-align:  middle;}
+				#_wep .panel_body .option .values button {color: #000 !important;border: solid 1px #444;background-color: #fff;margin-right: 2px;padding: 3px 7px;/* font-size: 0.9em; */max-width: 8em;text-align:  left;vertical-align: middle;border-radius: 3px !important;}
+					#_wep .panel_body .option .values button > span {line-height: 1.1em;display: inline-block;/* vertical-align: middle; */}
+				#_wep .panel_body .option .values button.active_option {background-color: #333 !important; color: #fff !important; border-color: #000 !important;/* font-weight: bold !important; */}
+
+
+
+
+
+
+
+
+
+	#_wep [data-option="color_theme"] .button {text-align: center; }
+	
+	#_wep .panel_bar [data-option="color_theme"] button span {display: none; }
+	#_wep .panel_bar [data-option="color_theme"] button > i {display: inline-block; height: 18px; width: 18px; border-radius: 50%; }
+		#_wep .panel_bar [data-option="color_theme"] button > i:before {content: "A"; display: inline-block; }
+		
+	#_wep .panel_bar [data-option="color_theme"] button[value="1"] {background-color: #fff; }
+		#_wep .panel_bar [data-option="color_theme"] button[value="1"] > i {color: #111; }
+		
+	#_wep .panel_bar [data-option="color_theme"] button[value="2"] {background-color: #000; }
+		#_wep .panel_bar [data-option="color_theme"] button[value="2"] > i {color: #fff; }
+	
+	#_wep .panel_bar [data-option="color_theme"] button[value="3"] {background-color: lightblue; }
+		#_wep .panel_bar [data-option="color_theme"] button[value="3"] > i {color: darkblue ; }
+	
+	#_wep .panel_bar [data-option="color_theme"] button[value="4"] {background-color: #FFF5E6; }
+		#_wep .panel_bar [data-option="color_theme"] button[value="4"] > i {color: #60351a; }
+	
+
+
+	
+	
+#_wep button i.icon {font-size: 1.25em;}
+
+
+
+
+/* font icons */
+@font-face{
+font-family: 'wep-icons';
+src: url('fonts/wep-icons.eot');
+src: url('fonts/wep-icons.eot?#iefix') format('embedded-opentype'),
+url('fonts/wep-icons.woff') format('woff'),
+url('fonts/wep-icons.ttf') format('truetype'),
+url('fonts/wep-icons.svg') format('svg');
+}
+
+
+#_wep [data-icon],
+#_wep [class^="icon-"],
+#_wep [class*=" icon-"] {vertical-align: middle;display: inline;}
+
+#_wep [data-icon]:before,
+#_wep [class^="icon-"]:before,
+#_wep [class*=" icon-"]:before {
+  font-family: "wep-icons" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#_wep [data-icon]:before {
+  content: attr(data-icon);
+}
+
+#_wep .icon-arrow-left:before {
+  content: "\62";
+}
+#_wep .icon-arrow-right:before {
+  content: "\63";
+}
+#_wep .icon-arrow-up:before {
+  content: "\64";
+}
+#_wep .icon-arrow-down:before {
+  content: "\65";
+}
+#_wep .icon-arrow-circle-o-left:before {
+  content: "\66";
+}
+#_wep .icon-arrow-circle-o-right:before {
+  content: "\67";
+}
+#_wep .icon-arrow-circle-o-up:before {
+  content: "\68";
+}
+#_wep .icon-arrow-circle-o-down:before {
+  content: "\69";
+}
+#_wep .icon-arrow-circle-down:before {
+  content: "\6a";
+}
+#_wep .icon-arrow-circle-left:before {
+  content: "\6b";
+}
+#_wep .icon-adjust:before {
+  content: "\6f";
+}
+#_wep .icon-caret-down:before {
+  content: "\70";
+}
+#_wep .icon-caret-left:before {
+  content: "\71";
+}
+#_wep .icon-caret-right:before {
+  content: "\72";
+}
+#_wep .icon-caret-square-o-down:before {
+  content: "\73";
+}
+#_wep .icon-caret-square-o-left:before {
+  content: "\74";
+}
+#_wep .icon-caret-square-o-right:before {
+  content: "\75";
+}
+#_wep .icon-caret-square-o-up:before {
+  content: "\76";
+}
+#_wep .icon-caret-up:before {
+  content: "\77";
+}
+#_wep .icon-check-square-o:before {
+  content: "\78";
+}
+#_wep .icon-check-square:before {
+  content: "\79";
+}
+#_wep .icon-chevron-up:before {
+  content: "\7a";
+}
+#_wep .icon-chevron-right:before {
+  content: "\41";
+}
+#_wep .icon-chevron-left:before {
+  content: "\42";
+}
+#_wep .icon-chevron-down:before {
+  content: "\43";
+}
+#_wep .icon-ellipsis-v:before {
+  content: "\61";
+}
+#_wep .icon-ellipsis-h:before {
+  content: "\6c";
+}
+#_wep .icon-eye:before {
+  content: "\6d";
+}
+#_wep .icon-eye-slash:before {
+  content: "\6e";
+}
+#_wep .icon-file-image-o:before {
+  content: "\44";
+}
+#_wep .icon-volume-down:before {
+  content: "\45";
+}
+#_wep .icon-volume-off:before {
+  content: "\46";
+}
+#_wep .icon-volume-up:before {
+  content: "\47";
+}
+#_wep .icon-wrench:before {
+  content: "\48";
+}
+#_wep .icon-thumb-tack:before {
+  content: "\49";
+}
+#_wep .icon-settings:before {
+  content: "\4a";
+}
+#_wep .icon-three-bars:before {
+  content: "\4b";
+}
+#_wep .icon-gear:before {
+  content: "\4c";
+}
+#_wep .icon-eye-1:before {
+  content: "\4d";
+}
+#_wep .icon-unmute:before {
+  content: "\4e";
+}
+#_wep .icon-sliders:before {
+  content: "\4f";
+}
+#_wep .icon-times:before {
+  content: "\50";
+}
+#_wep .icon-times-circle:before {
+  content: "\51";
+}
+#_wep .icon-list-ul:before {
+  content: "\52";
+}
+#_wep .icon-list:before {
+  content: "\53";
+}
+#_wep .icon-magic:before {
+  content: "\54";
+}
+#_wep .icon-lock:before {
+  content: "\55";
+}
+#_wep .icon-chevron-circle-up:before {
+  content: "\56";
+}
+#_wep .icon-chevron-circle-right:before {
+  content: "\57";
+}
+#_wep .icon-chevron-circle-left:before {
+  content: "\58";
+}
+#_wep .icon-chevron-circle-down:before {
+  content: "\59";
+}

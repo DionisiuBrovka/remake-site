@@ -1,0 +1,12 @@
+document.addEventListener("DOMContentLoaded", () => {
+	//set_snow_fx()
+});
+
+function set_snow_fx(){
+	let root_fx_el = document.getElementById('fx_layer');
+	let over_fx_el = document.getElementById('fx_layer_over');
+	
+	root_fx_el.classList.add("snow-container");
+	over_fx_el.classList.add("snow-container-over");
+
+}

@@ -1,0 +1,107 @@
+@charset "UTF-8";
+/* ШАБЛОН 1 */
+
+
+/* common */
+._we { }
+
+html._we, body._we {font-size: 18px; }
+._we body {font-size: 1em !important; }
+
+._we * {
+	text-shadow: none !important;
+	box-shadow: none !important;
+}
+
+html._we.palette_mode {padding-top: 40px !important; }
+
+._we #layout {padding-top: 36px !important; }
+._we #layout .header_bg {display: none; }
+
+
+/* color theme option */
+._we.color_theme_1 #layout * {
+	background-color: #fff !important;
+	color: #000 !important;
+	border-color: #000 !important;
+}
+._we.color_theme_1 body {background: #fff !important;}
+
+
+._we.color_theme_2 #layout * {
+	background-color: #111 !important;
+	color: #fff !important;
+	border-color: #fff !important;
+}
+._we.color_theme_2 body {background: #111 !important;}
+
+
+._we.color_theme_3 #layout * {
+	background-color: lightblue !important;
+	color: darkblue !important;
+	border-color: darkblue !important;
+}
+._we.color_theme_3 body {background: lightblue !important;}
+
+
+._we.color_theme_4 #layout * {
+	background-color: #FFF5E6 !important;
+	color: #60351a !important;
+	border-color: #60351a !important;
+}
+._we.color_theme_4 body {background: #FFF5E6 !important;}
+
+/* font option */
+._we.font_family_sans #layout * {font-family: Tahoma, Verdana, sans !important; }
+._we.font_family_serif #layout * {font-family: Georgia, 'Times New Roman', serif !important; }
+._we.font_family_monospace #layout * {font-family: monospace !important; }
+
+
+/* font size option */
+._we.font_size_small {
+	font-size: 14px;
+}
+
+._we.font_size_large {
+	font-size: 22px;
+}
+
+._we.font_size_huge {
+	font-size: 26px;
+}
+
+
+/* font spacing option */
+._we.font_spacing_large #layout {
+	letter-spacing: 0.05em !important;
+	line-height: 150%;
+}
+
+._we.font_spacing_huge #layout {
+	letter-spacing: 0.1em !important;
+	line-height: 200%;
+}
+
+
+/* image visibility option */
+._we.images_off #layout img {
+	visibility: none;
+	opacity: 0;
+}
+
+._we.images_off #layout * {
+	background-image: none !important;
+}
+
+
+._we.images_black_n_white #layout img,
+._we.images_black_n_white #layout #main_slider .item,
+._we.images_black_n_white #layout .item .preview
+{
+	-webkit-filter: grayscale(1);
+    filter: grayscale(1);
+}
+
+
+._we #layout .glyphicon,
+._we #layout .owl-banners .owl-prev, ._we #layout .owl-banners .owl-next {font-family: 'Glyphicons Halflings' !important; }
